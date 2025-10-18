@@ -1,5 +1,5 @@
 # JavaScrProj123
-Project for college
+Just cooking site
 ## Разработка
 1. автор (строка)
 2. название (строка)
