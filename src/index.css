@@ -1,0 +1,39 @@
+/* src/index.css */
+
+/* === Глобальные переменные и базовые стили === */
+:root {
+  --bg: #fffaf5; /* светлый кремовый */
+  --muted: #6b5b4b;
+  --accent: #d9822b; /* тёплый апельсиновый */
+  --card: #fff;
+  --shadow: rgba(30,30,30,0.08);
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Общие контейнеры и базовая сетка */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Базовые адаптивные настройки */
+@media (max-width: 800px) {
+  .content {
+    flex-direction: column;
+  }
+  .right-col {
+    width: 100%;
+  }
+}

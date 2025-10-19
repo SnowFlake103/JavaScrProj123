@@ -1,0 +1,45 @@
+/* === Основные переменные === */
+:root {
+  --accent: #ff7f50;
+  --muted: #7a6b5d;
+  --card: #fffaf5;
+  --radius: 12px;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --bg: #fff7f0;
+}
+
+/* === Глобальные стили === */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: #3b2d24;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+.app-root .app-footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 14px;
+  background: #fff3e6;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* === Адаптивность === */
+@media (max-width: 800px) {
+  .thumb img {
+    width: 100%;
+    height: 160px;
+  }
+  .card-link {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,122 @@
+.add-recipe-page {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.add-recipe-page h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.recipe-form label {
+  display: block;
+  font-weight: 600;
+  margin: 0.75rem 0 0.25rem;
+  color: #222;
+}
+
+.recipe-form input,
+.recipe-form textarea,
+.recipe-form select {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.recipe-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.dynamic-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.dynamic-row textarea {
+  flex: 1;
+  min-height: 60px;
+}
+
+.dynamic-row button {
+  background: none;
+  border: none;
+  color: #d33;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.add-btn {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.add-btn:hover {
+  background: #c8e6c9;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: #4caf50;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background: #43a047;
+}
+
+.dynamic-step {
+  display: flex;
+  flex-direction: column; /* Ставим поля друг под другом */
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.dynamic-step textarea {
+  width: 100%;
+  min-height: 80px; /* делаем textarea более комфортной */
+  resize: vertical;
+}
+
+.dynamic-step input[type="url"] {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.dynamic-step button {
+  align-self: flex-end; /* крестик справа */
+  background: none;
+  border: none;
+  color: #d33;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

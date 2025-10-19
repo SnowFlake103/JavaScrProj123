@@ -1,0 +1,131 @@
+/* === Общая структура === */
+.site-header {
+  background: linear-gradient(90deg, #fffdf9, #fffaf5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06); /* ✅ мягкая тень под хедером */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* === Логотип === */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  margin-right: 10px;
+  transform: translateY(1px);
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 19px;
+  color: #3b2d24;
+  letter-spacing: 0.3px;
+}
+
+/* === Навигация === */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #6b5b4b;
+  font-weight: 500;
+  transition: color 0.25s;
+}
+
+.main-nav a:hover {
+  color: rgb(255, 128, 82);
+}
+
+/* === Кнопка Войти === */
+.login-btn {
+  background: rgb(255, 127, 80);
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 3px 8px rgba(255, 127, 80, 0.3);
+}
+
+.login-btn:hover {
+  background: rgb(255, 148, 107);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(255, 127, 80, 0.4);
+}
+
+/* Кнопка "Добавить рецепт" */
+.add-recipe-btn {
+  background: rgb(255, 127, 80);
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 3px 8px rgba(255, 127, 80, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.add-recipe-btn:hover {
+  background: rgb(255, 148, 107);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(255, 127, 80, 0.4);
+}
+
+/* === Кнопка "Выйти" === */
+.logout-btn {
+  background: none;
+  border: none;
+  color: #6b5b4b;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.25s, transform 0.2s;
+  padding: 8px 0;
+}
+
+.logout-btn:hover {
+  color: rgb(255, 127, 80);
+  transform: translateY(-1px);
+}
+
+.logout-btn:focus {
+  outline: none;
+}
+
+/* === Адаптивность === */
+@media (max-width: 700px) {
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .main-nav {
+    gap: 14px;
+  }
+
+  .login-btn {
+    padding: 8px 14px;
+    font-size: 15px;
+  }
+}

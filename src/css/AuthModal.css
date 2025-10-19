@@ -1,0 +1,102 @@
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(4px);
+}
+
+.auth-modal {
+  background: #fffaf3;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  position: relative;
+}
+
+.auth-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #a38c7b;
+  cursor: pointer;
+}
+
+.auth-modal h2 {
+  color: #3b2d24;
+  margin-bottom: 20px;
+}
+
+.auth-modal input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.auth-modal button {
+  width: 100%;
+  background: #ff7f50;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.auth-modal button:hover {
+  background: #ff946b;
+  transform: translateY(-1px);
+}
+
+.auth-modal .toggle {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6b5b4b;
+}
+
+.auth-modal .toggle span {
+  color: #ff7f50;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.auth-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;   /* чуть сдвинули к краю */
+  background: none;
+  border: none;
+  font-size: 18px; /* уменьшили с 22px */
+  color: #8c7a6b;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.auth-close:hover {
+  color: #ff7f50;
+  transform: scale(1.2);
+}
