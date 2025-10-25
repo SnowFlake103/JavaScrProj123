@@ -1,11 +1,26 @@
+/* === Фон видео === */
+.background-video {
+  position: fixed; /* видео на весь экран */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* за всеми элементами */
+  pointer-events: none; /* клики проходят сквозь видео */
+}
+
+/* === Главная страница === */
 .home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 0 60px;
   text-align: center;
-  background-color: #fffaf5;
+  background-color: #fffaf5; /* на случай, если видео не загрузится */
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 /* === Герой-секция === */
@@ -13,18 +28,13 @@
   width: 100%;
   text-align: center;
   padding: 10px 16px 90px;
-  background: linear-gradient(
-    to bottom,
-    #fffaf5 0%,
-    #fff4e9 35%,
-    #fff0e1 55%,
-    #fff6ee 85%,
-    #fffaf5 100%
-  );
+
   box-shadow: inset 0 -8px 16px rgba(0, 0, 0, 0.04);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   margin-bottom: 40px;
   border-radius: 0 0 40px 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
@@ -48,6 +58,9 @@
   width: 100%;
   max-width: 680px;
   margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+  
 }
 
 .search-bar {
@@ -60,11 +73,19 @@
   flex: 1;
   padding: 14px 16px;
   border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 16px;
-  background: white;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-  transition: 0.2s;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+  color: #2b1c12; /* цвет текста */
+}
+
+.search-bar input:hover {
+  transform: scale(1.55);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar input:focus {
@@ -72,6 +93,7 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.06);
   outline: none;
 }
+
 
 .search-btn {
   padding: 14px 22px;
@@ -86,30 +108,36 @@
 }
 
 .search-btn:hover {
-  background: #ff946b;
+  background: #ffffff;
   transform: translateY(-2px);
 }
 
-/* === Фильтры === */
+/* === Фильтры с размытием === */
 .filters {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .filters select {
   padding: 10px 14px;
   border-radius: 10px;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(161, 149, 149, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   font-size: 15px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #2b1c12;
 }
 
 .filters select:hover {
-  border-color: #ff7f50;
+  border-color: #dfdfdf;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 /* === Список рецептов === */
@@ -121,6 +149,8 @@
   max-width: 1300px;
   margin-bottom: 20px;
   padding: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .recipes-header h2 {
@@ -142,12 +172,16 @@
   max-width: 1300px;
   margin: 0 auto;
   padding: 0;
+  position: relative;
+  z-index: 2;
 }
 
 /* === Пустые результаты === */
 .empty-results {
   margin-top: 60px;
   color: #3b2d24;
+  position: relative;
+  z-index: 2;
 }
 
 .empty-icon {
@@ -203,4 +237,3 @@
     padding: 0 10px;
   }
 }
-

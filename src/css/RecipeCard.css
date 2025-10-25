@@ -1,20 +1,22 @@
 .recipe-card {
-  background: white;
-  border-radius: 16px;
+  backdrop-filter: blur(1111110px);
+  border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
   margin: 0;
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
   min-height: 480px;
   position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  
 }
 
 .recipe-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12)
 }
 
 .card-link {
@@ -30,6 +32,8 @@
   width: 100%;
   height: 320px;
   overflow: hidden;
+  box-shadow: 0 400px 120px rgba(107, 107, 107, 0.39);
+  /*  box-shadow: 0 400px 120px rgba(245, 161, 245, 0.39); */
 }
 
 .thumb img {
@@ -108,7 +112,7 @@
   display: inline-block;
   padding: 4px 12px;
   background: #FFF3E0;
-  color: #E67E22;
+  color: #8b715a;
   font-size: 12px;
   font-weight: 500;
   border-radius: 12px;

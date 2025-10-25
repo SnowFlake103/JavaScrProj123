@@ -90,12 +90,11 @@ export default function ProfilePage() {
   }, [session]);
 
   useEffect(() => {
-    if (activeTab === 'my-recipes') {
+    if (session) {
       loadMyRecipes();
-    } else if (activeTab === 'liked-recipes') {
       loadLikedRecipes();
     }
-  }, [activeTab, loadMyRecipes, loadLikedRecipes]);
+  }, [session, loadMyRecipes, loadLikedRecipes]);
 
   return (
     <div className="profile-page">

@@ -21,7 +21,7 @@ export default function AuthModal({ onClose, onLogin }) {
         result = await supabase.auth.signUp({
           email,
           password,
-          options: { data: { login } } // сохраняем логин в user_metadata
+          options: { data: { login } } 
         });
       } else {
         result = await supabase.auth.signInWithPassword({ email, password });
@@ -70,9 +70,14 @@ export default function AuthModal({ onClose, onLogin }) {
 
           {error && <p className="error">{error}</p>}
 
-          <button type="submit" disabled={loading}>
+          <button
+            type="submit"
+            className="auth-submit"
+            disabled={loading}
+          >
             {loading ? "Загрузка..." : isRegister ? "Создать аккаунт" : "Войти"}
           </button>
+
         </form>
 
         <p className="toggle">

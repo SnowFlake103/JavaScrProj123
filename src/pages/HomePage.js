@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../css/HomePage.css";
 import RecipeCard from "../components/RecipeCard";
 import { supabase } from "../services/supabaseClient";
+import backgroundVideo from "../assets/video.mp4";
 
 export default function HomePage() {
   const [recipes, setRecipes] = useState([]);
@@ -41,7 +42,7 @@ export default function HomePage() {
   useEffect(() => {
     loadRecipes();
   }, []);
-
+  
   useEffect(() => {
     let filtered = [...recipes];
 
@@ -58,7 +59,8 @@ export default function HomePage() {
       const cuisineMap = {
         "Итальянская": "italian",
         "Французская": "french",
-        "Азиатская": "asian"
+        "Азиатская": "asian",
+        "Другая": "other"
       };
       const cuisineValue = cuisineMap[cuisineFilter];
       filtered = filtered.filter(recipe => recipe.cuisine === cuisineValue);
@@ -95,10 +97,16 @@ export default function HomePage() {
 
   return (
     <main className="home-page">
+      <video autoPlay loop muted className="background-video">
+        <source src={backgroundVideo} type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+      </video>
+
       <section className="hero">
         <h1>Мир Спагетти</h1>
         <p>Откройте для себя лучшие рецепты итальянской пасты и не только</p>
       </section>
+
       <section className="search-section">
         <form className="search-bar" onSubmit={handleSearch}>
           <input
@@ -107,7 +115,6 @@ export default function HomePage() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button type="submit" className="search-btn">🔍 Найти</button>
         </form>
         <div className="filters">
           <select
@@ -118,6 +125,7 @@ export default function HomePage() {
             <option>Итальянская</option>
             <option>Французская</option>
             <option>Азиатская</option>
+            <option>Другая</option>
           </select>
           <select
             value={typeFilter}

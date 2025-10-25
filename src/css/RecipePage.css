@@ -178,6 +178,21 @@
   background: #FF5252;
 }
 
+.edit-btn {
+  background: #6bdcff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.edit-btn:hover {
+  background: #5297ff;
+}
+
 .like-button {
   position: absolute;
   top: 20px;

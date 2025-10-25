@@ -24,13 +24,27 @@ ul, ol {
   padding-left: 20px;
 }
 
+/* === Фон видео === */
+.background-video {
+  position: fixed; /* видео на весь экран */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* за всеми элементами */
+  pointer-events: none; /* клики проходят сквозь видео */
+}
+
+
 .app-root .app-footer {
   text-align: center;
   padding: 24px;
   color: var(--muted);
   font-size: 14px;
-  background: #fff3e6;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(120000px);
+
 }
 
 /* === Адаптивность === */

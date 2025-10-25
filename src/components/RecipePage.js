@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import "../css/RecipePage.css";
 
+
 export default function RecipePage() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -71,7 +72,7 @@ export default function RecipePage() {
 
   const handleLike = async () => {
     if (!currentUserId) {
-      alert("Вы должны быть авторизованы, чтобы ставить лайки!");
+      console.log("Вы должны быть авторизованы, чтобы ставить лайки!");
       return;
     }
 
@@ -105,11 +106,16 @@ export default function RecipePage() {
       .delete()
       .eq("id", id);
     if (error) {
-      alert("Ошибка при удалении рецепта: " + error.message);
+      console.log("Ошибка при удалении рецепта: " + error.message);
     } else {
       navigate("/profile");
     }
   };
+  
+  
+  const handleEdit = () => {
+    navigate(`/edit-recipe/${recipe.id}`); 
+  }
 
   if (loading) {
     return <p style={{ textAlign: "center", marginTop: 40 }}>Загрузка рецепта...</p>;
@@ -220,6 +226,9 @@ export default function RecipePage() {
         <div className="recipe-actions">
           <button className="delete-btn" onClick={handleDelete}>
             Удалить рецепт
+          </button>
+          <button className="edit-btn" onClick={handleEdit}>
+            Редактировать рецепт
           </button>
         </div>
       )}

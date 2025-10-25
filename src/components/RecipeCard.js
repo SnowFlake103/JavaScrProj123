@@ -63,7 +63,7 @@ export default function RecipeCard({ recipe, userId }) {
     e.stopPropagation();
 
     if (!userId) {
-      alert("Вы должны быть авторизованы, чтобы ставить лайки!");
+      console.log("Вы должны быть авторизованы, чтобы ставить лайки!");
       return;
     }
 
@@ -105,7 +105,7 @@ export default function RecipeCard({ recipe, userId }) {
             {difficultyText}
           </div>
           <h3 className="title">{recipe.title}</h3>
-          <p className="author">от {recipe.author || "Аноним"}</p>
+          <p className="author"> {recipe.author || ""}</p>
           <p className="desc">
             {recipe.description
                 ? recipe.description.length > 120

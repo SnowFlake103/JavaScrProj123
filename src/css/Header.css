@@ -1,8 +1,8 @@
 /* === Общая структура === */
 .site-header {
-  background: linear-gradient(90deg, #fffdf9, #fffaf5);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06); /* ✅ мягкая тень под хедером */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -59,7 +59,7 @@
 
 /* === Кнопка Войти === */
 .login-btn {
-  background: rgb(255, 127, 80);
+  background: rgb(255, 148, 107);
   color: white !important;
   padding: 10px 18px;
   border-radius: 12px;
@@ -69,14 +69,14 @@
 }
 
 .login-btn:hover {
-  background: rgb(255, 148, 107);
+  background: rgb(255, 174, 142);
   transform: translateY(-1px);
   box-shadow: 0 4px 10px rgba(255, 127, 80, 0.4);
 }
 
 /* Кнопка "Добавить рецепт" */
 .add-recipe-btn {
-  background: rgb(255, 127, 80);
+  background: rgb(255, 148, 107);
   color: white !important;
   padding: 10px 18px;
   border-radius: 12px;
@@ -88,7 +88,7 @@
 }
 
 .add-recipe-btn:hover {
-  background: rgb(255, 148, 107);
+  background: rgb(255, 174, 142);
   transform: translateY(-1px);
   box-shadow: 0 4px 10px rgba(255, 127, 80, 0.4);
 }
