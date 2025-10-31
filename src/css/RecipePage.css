@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  background: #FEFBF8;
+  backdrop-filter: blur(1111110px);
   font-family: 'Arimo', sans-serif;
 }
 
@@ -81,7 +81,8 @@
 
 .ingredients-card {
   width: 300px;
-  background: white;
+  backdrop-filter: blur(1111110px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(210, 180, 140, 0.3);
   border-radius: 16px;
   padding: 24px;

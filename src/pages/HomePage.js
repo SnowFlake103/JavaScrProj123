@@ -103,7 +103,7 @@ export default function HomePage() {
       </video>
 
       <section className="hero">
-        <h1>Мир Спагетти</h1>
+        <h1>✧Мир Спагетти✧</h1>
         <p>Откройте для себя лучшие рецепты итальянской пасты и не только</p>
       </section>
 
@@ -111,7 +111,7 @@ export default function HomePage() {
         <form className="search-bar" onSubmit={handleSearch}>
           <input
             type="text"
-            placeholder="Поиск рецептов..."
+            placeholder="✎﹏﹏﹏"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />

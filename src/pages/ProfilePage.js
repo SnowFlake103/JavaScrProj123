@@ -30,7 +30,7 @@ export default function ProfilePage() {
   const fetchMemberSince = async (userId) => {
     try {
       const { data, error } = await supabase
-        .from('users') // или другая таблица, где хранится дата регистрации
+        .from('users') 
         .select('created_at')
         .eq('id', userId)
         .single();
@@ -108,7 +108,7 @@ export default function ProfilePage() {
       ) : (
         <div className="profile-content">
           <div className="profile-header">
-            <div className="profile-avatar">👤</div>
+            <div className="profile-avatar">😎</div>
             <div className="profile-info">
               <h1 className="profile-name">
                 {session.user.user_metadata?.login || session.user.email || 'Пользователь'}

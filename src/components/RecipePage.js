@@ -3,7 +3,6 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import "../css/RecipePage.css";
 
-
 export default function RecipePage() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -164,7 +163,7 @@ export default function RecipePage() {
             )}
           </div>
           <h1>{recipe.title}</h1>
-          <p className="author">от {recipe.author || "Аноним"}</p>
+          <p className="author">{recipe.author || ""}</p>
           <p className="description">{recipe.description}</p>
           <div className="recipe-meta">
             <div className="meta-item">
