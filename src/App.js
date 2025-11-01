@@ -7,15 +7,10 @@ import Header from './components/Header';
 import './App.css';
 import AddRecipePage from "./components/AddRecipePage";
 import RecipeEdit from "./components/RecipeEdit";
-import backgroundVideo from "./assets/video.mp4";
 
 function App() {
   return (
     <div className="app-root">
-      <video autoPlay loop muted className="background-video">
-        <source src={backgroundVideo} type="video/mp4" />
-        Ваш браузер не поддерживает видео.
-      </video>
       <Header />
       <main className="container">
         <Routes>
